@@ -9,7 +9,7 @@
 <body style="background-color: aliceblue; padding-left: 20px;">
     <% var formAction = book && book.id ? `/api/book-update/${book.id}` : '/api/book-create' %>
     <% var formTitle = book && book.id ? 'Update review' : 'Create review'%>
-    <% var bookTitle = book ? (book.book ? book.book.title : book.title) : ''%>
+    <% var bookTitle = book ? (book.book ? book.book.title :book.title) : ''%>
     <% var bookAuthor = book ? (book.book ? book.book.author : book.author) : ''%>
     <% var bookGenre = book ? (book.book ? book.book.genre : book.genre) : ''%>
     <% var bookText = book ? (book.book ? book.book.text : book.text) : ''%>
