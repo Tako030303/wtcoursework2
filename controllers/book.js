@@ -11,6 +11,16 @@ const bookController = {
         res.status(500).json({ error: error.message });
       }
     },
+    readById: (req, res) => {
+      try {
+        const book = bookService.getById(req, res);
+        console.log(book)
+        res.render('full_view', {book})
+      } catch (error) {
+        res.status(500).json({ error: error.message });
+      }
+    },
+
     getAll: (req, res) => {
         try {
           const books = bookService.get(req, res);
