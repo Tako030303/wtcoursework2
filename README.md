@@ -15,23 +15,31 @@ This web application is designed to provide a system to store user-created book 
 
 1. **Clone the repository:**
 
+```
 git clone https://github.com/Tako030303/wtcoursework2.git
+```
 
 2. **Navigate to the project directory:**
 
+```
 cd wtcoursework2
+```
 
 3. **Install dependencies:**
 
 Ensure you have `npm` (Node Package Manager) installed. Run the following command:
 
+```
 npm install
-  
+```
+
 4. **Run the app locally:**
 
 After installing the dependencies, run the app with:
 
+```
 npm start
+```
 
 The app will be accessible at `http://localhost:3000` in your browser.  
 
@@ -66,7 +74,7 @@ You can install these by running `npm install` in the project directory.
 
 ### Project Structure
 
-  
+```
 book-app/
 ├── **controllers/**          # MVC Controllers
 │   └── bookController.js     # Renamed for clarity (previously 'book.js')
@@ -105,3 +113,4 @@ book-app/
 ├── **package.json**          # Project metadata/dependencies
 ├── **package-lock.json**     # Auto-generated (exact dependency versions)
 └── **README.md**             # Project documentation
+```
