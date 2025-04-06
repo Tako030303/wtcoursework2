@@ -14,7 +14,6 @@ const bookController = {
     readById: (req, res) => {
       try {
         const book = bookService.getById(req, res);
-        console.log(book)
         res.render('full_view', {book})
       } catch (error) {
         res.status(500).json({ error: error.message });
@@ -54,7 +53,7 @@ const bookController = {
             return res.status(404).json({ error: 'book not found' });
           }
           res.redirect('/');
-        } catch (error) {x  
+        } catch (error) {  
           res.status(500).json({ error: error.message });
         }
       },

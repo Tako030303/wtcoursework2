@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/full-view.css">
     <title>Document</title>
 </head>
 <body>
-    <a href="/" class="btn">Main menu</a>
-    <div style="padding-left: 20px;">
-        <b>Title:</b>
-        <p><%=book.book.title %></p>
-        <b>Author:</b>
-        <p><%=book.book.author %></p>
-        <b>Genre:</b>
-        <p><%=book.book.genre %></p>
-        <b>Review:</b>
-        <p style="text-wrap: wrap;"><%=book.book.text %></p>
+    <div class="container">
+        <a href="/" class="btn btn-default">Main menu</a>
+        <div class="book-detail">
+            <h2>Title:</h2>
+            <p><%=book.book.title %></p>
+            <h2>Author:</h2>
+            <p><%=book.book.author %></p>
+            <h2>Genre:</h2>
+            <p><%=book.book.genre %></p>
+            <h2>Review:</h2>
+            <p class="review-text"><%=book.book.text %></p>
+        </div>
     </div>
 </body>
 </html>

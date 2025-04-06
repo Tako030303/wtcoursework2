@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/create-update.css">
     <title>Document</title>
 </head>
-<body style="background-color: aliceblue; padding-left: 20px;">
+<body>
     <% var formAction = book && book.id ? `/api/book-update/${book.id}` : '/api/book-create' %>
     <% var formTitle = book && book.id ? 'Update review' : 'Create review'%>
     <% var bookTitle = book ? (book.book ? book.book.title :book.title) : ''%>
     <% var bookAuthor = book ? (book.book ? book.book.author : book.author) : ''%>
     <% var bookGenre = book ? (book.book ? book.book.genre : book.genre) : ''%>
     <% var bookText = book ? (book.book ? book.book.text : book.text) : ''%>
-    <a href="/" class="btn">Main menu</a>
-    <h1 class="mb-4"><%=formTitle%></h1>
-    <form style="display: flex; flex-direction: column; width: 50%;" action=<%=formAction%> method="post">
+    <a href="/" class="btn btn-default">Main menu</a>
+    <h1><%=formTitle%></h1>
+    <form action=<%=formAction%> method="post">
         <p class="fs-3 fw-bold">Title:</p>
         <input type="text" value="<%=bookTitle%>" name="title">
         <p class="fs-3 fw-bold">Author:</p>

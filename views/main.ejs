@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/mainpage.css">
     <title>Document</title>
 </head>
-<body style="display: flex; flex-direction: column; background-color: aqua;">
-    <div style="display: flex; align-items: center; justify-content: center; height: 5em; font-size: 1.8em;"><strong>Welcome to book review creation app</strong></div>
-    <a href="book-create" class="btn btn-default" style="height: 3em; display: flex; align-items: center; justify-content: center;">Create new</a>
-    <ul style="display: flex; flex-direction: column; gap: 10px; margin: 10px; padding-left: 0;">
+<body>
+    <div class="container">
+    <h1>Book review app</h1>
+    <div class="create-new-container">
+        <a href="book-create" class="btn btn-default">Create new</a>
+    </div>
+    <table>
         <% books.forEach(item => { %>
-            <li style="display: flex; justify-content: space-between; background-color: aliceblue; height: 4em; align-items: center;">
-                <div style="display: flex; justify-content: space-around; width: 50%;">
-                    <p><%=item.book.title %></p>
-                    <p><%=item.book.author %></p>
-                    <p><%=item.book.genre %></p>
-                </div>
-                <div style="margin-left: auto; padding-right: 20px;">
+            <tr>
+                <td><%=item.book.title %></td>
+                <td><%=item.book.author %></td>
+                <td><%=item.book.genre %></td>
+                <td class="action">
                     <a class="btn btn-default" href="api/book-view/<%= item.id %>">See review</a>
                     <a class="btn btn-default" href="book-update/<%= item.id %>">Update</a>
                     <a class="btn btn-default" href="api/book-delete/<%= item.id %>">Delete</a>
-                </div>
-            </li>
+                </td>
+            </tr>
         <%}); %>
-    </ul>
+    </table>
+    </div>
 </body>
 </html>
