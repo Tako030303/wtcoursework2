@@ -67,5 +67,41 @@ You can install these by running `npm install` in the project directory.
 ### Project Structure
 
   
-
-/wtcoursework2 │ ├── /public # Static assets (images, fonts, etc.) │ ├── index.html # Main HTML file │ └── ... │ ├── /src # Source files │ ├── /components # Reusable UI components │ ├── /styles # CSS or SCSS files │ ├── /pages # Page-specific components │ ├── /utils # Helper functions │ ├── App.js # Main component │ └── index.js # Entry point for React (or other framework) │ ├── package.json # Project dependencies and scripts ├── README.md # Documentation for the app └── .gitignore # Git ignore file for node_modules, etc.
+book-app/
+├── **controllers/**          # MVC Controllers
+│   └── bookController.js     # Renamed for clarity (previously 'book.js')
+│
+├── **data/**                 # Database/files
+│   └── book.db.json         # JSON-based database
+│
+├── **public/**               # Static assets (served directly)
+│   ├── images/              # Images
+│   ├── js/                  # Client-side JavaScript (renamed from 'javascripts')
+│   └── css/                 # Styles (renamed from 'styles')
+│       ├── create-update.css
+│       ├── full-view.css
+│       └── mainpage.css
+│
+├── **routes/**               # Express route definitions
+│   ├── api/                 # API endpoints (REST/JSON)
+│   │   └── bookRoutes.js    # Renamed for clarity (previously 'book.js')
+│   └── web/                 # Web views (HTML/EJS)
+│       └── bookRoutes.js    # Renamed for clarity
+│
+├── **services/**             # Business logic
+│   └── bookService.js       # Renamed for clarity
+│
+├── **validators/**           # Input validation
+│   └── bookValidator.js     # Renamed for clarity
+│
+├── **views/**                # EJS templates
+│   ├── create_update.ejs    # Form for create/update
+│   ├── full_view.ejs        # Detailed book view
+│   └── main.ejs             # Homepage listing
+│
+├── **.gitignore**            # Specifies ignored files
+├── **app.js**                # Main Express app setup
+├── **LICENSE**               # Project license
+├── **package.json**          # Project metadata/dependencies
+├── **package-lock.json**     # Auto-generated (exact dependency versions)
+└── **README.md**             # Project documentation
