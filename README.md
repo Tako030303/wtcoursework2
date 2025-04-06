@@ -1,4 +1,4 @@
-# Web Application Project
+# Book review library
 
 ## About the App
 
