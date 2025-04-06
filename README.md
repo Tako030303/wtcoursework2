@@ -76,13 +76,13 @@ You can install these by running `npm install` in the project directory.
 
 ```
 book-app/
-├── **controllers/**          # MVC Controllers
+├── controllers/        # MVC Controllers
 │   └── bookController.js     # Renamed for clarity (previously 'book.js')
 │
-├── **data/**                 # Database/files
+├── data/                 # Database/files
 │   └── book.db.json         # JSON-based database
 │
-├── **public/**               # Static assets (served directly)
+├── public/               # Static assets (served directly)
 │   ├── images/              # Images
 │   ├── js/                  # Client-side JavaScript (renamed from 'javascripts')
 │   └── css/                 # Styles (renamed from 'styles')
@@ -90,27 +90,27 @@ book-app/
 │       ├── full-view.css
 │       └── mainpage.css
 │
-├── **routes/**               # Express route definitions
+├── routes/               # Express route definitions
 │   ├── api/                 # API endpoints (REST/JSON)
 │   │   └── bookRoutes.js    # Renamed for clarity (previously 'book.js')
 │   └── web/                 # Web views (HTML/EJS)
 │       └── bookRoutes.js    # Renamed for clarity
 │
-├── **services/**             # Business logic
+├── services/             # Business logic
 │   └── bookService.js       # Renamed for clarity
 │
-├── **validators/**           # Input validation
+├── validators/           # Input validation
 │   └── bookValidator.js     # Renamed for clarity
 │
-├── **views/**                # EJS templates
+├── views/               # EJS templates
 │   ├── create_update.ejs    # Form for create/update
 │   ├── full_view.ejs        # Detailed book view
 │   └── main.ejs             # Homepage listing
 │
-├── **.gitignore**            # Specifies ignored files
-├── **app.js**                # Main Express app setup
-├── **LICENSE**               # Project license
-├── **package.json**          # Project metadata/dependencies
-├── **package-lock.json**     # Auto-generated (exact dependency versions)
-└── **README.md**             # Project documentation
+├── .gitignore            # Specifies ignored files
+├── app.js                # Main Express app setup
+├── LICENSE               # Project license
+├── package.json          # Project metadata/dependencies
+├── package-lock.json     # Auto-generated (exact dependency versions)
+└── README.md             # Project documentation
 ```
